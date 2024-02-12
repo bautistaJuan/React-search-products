@@ -33,6 +33,7 @@ function App() {
                             title={r.title}
                             picture={r.thumbnail}
                             price={r.price}
+                            linkTo={r.permalink}
                         />
                     )
                 )}
