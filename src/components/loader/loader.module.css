@@ -1,0 +1,25 @@
+.loader {
+    position: absolute;
+    margin-top: 30px;
+    height: 0;
+    width: 0;
+    padding: 30px;
+    border: 10px solid #fffb06;
+    border-right-color: #36303082;
+    border-radius: 50%;
+    animation: rotate .5s infinite;
+    top: 30%;
+    left: 49%;
+}
+
+@media (min-width:500px) {
+    .loader {
+        left: 46%;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
