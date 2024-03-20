@@ -4,41 +4,12 @@
 
 body {
     margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
 }
 
 .container {
     min-height: 100vh;
-    background-image: url("../src/images/OnWj0is.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0d868f;
-}
-
-.container_article {
-    display: grid;
-    padding: 20px;
-    overflow: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-}
-
-@media (max-width:270px) {
-    .container_article {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width:570px) {
-    .container_article {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 30px;
-    }
-}
-
-@media (min-width:900px) {
-    .container_article {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 40px;
-    }
 }

@@ -1,19 +1,18 @@
 import { FormEvent } from "react";
 import styles from "./form.module.css"
-function SearchForm(props: any) {
+import { Link, useNavigate } from "react-router-dom";
+
+function SearchForm() {
+    const navigate = useNavigate();
     const setTitle = (e: FormEvent | any) => {
         e.preventDefault();
         const title = e.target.text.value;
-        // Si existe title, este sera enviado a App a traves de su props
-        // Y eso sucede cuando hacemos click en "Search"
-        if (title) {
-            props.onSearch(title)
-        }
+        if (title !== "") navigate("/search/" + title, { replace: true });
     }
     return (
         <>
             <form className={styles["form-container"]} onSubmit={setTitle}>
-                <a className={styles["form-container_nav-logo"]} href="/"></a>
+                <Link to="/" className={styles["form-container_nav-logo"]} />
                 <div className={styles["form-container_div"]}>
                     <input className={styles["form-container_input"]} type="text" name="text" placeholder="Buscar aqui.." autoComplete="off" autoFocus />
                     <button className={styles["form-container_search-btn"]}>
