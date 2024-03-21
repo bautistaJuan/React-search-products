@@ -1,18 +1,15 @@
 /* Estilos para el ultimo nivel de la pagina, el producto seleccionado */
-
 .product-container {
-    width: 100%;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
 }
 
-@media (min-width: 760px) {
-    .product-container {
-        flex-direction: row;
-    }
+.slider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel {
@@ -21,7 +18,7 @@
 }
 
 .slider-button {
-    border: 1px solid #444242;
+    border: none;
     background-color: transparent;
     color: #000000;
     font-size: 32px;
@@ -29,36 +26,87 @@
 }
 
 .carrousel-image {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    height: 380px;
+    max-height: 420px;
     border-radius: 10px;
     object-fit: contain;
 }
 
+.container-text-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.product-price {
+    font-size: 32px;
+    font-weight: 300;
+    margin-top: 12px;
+}
+
+.button-comprar {
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    line-height: 48px;
+    margin-top: 12px;
+}
+
+/* para todos los sections */
+section {
+    padding: 15px;
+}
 
 /* detalles */
 .attributes {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 210px);
 }
 
 .product-ul {
     margin: 0;
     padding: 0;
+    font-size: 18px;
     display: flex;
-    flex-direction: row;
-    gap: 5px;
-    border: solid 1px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.product-ul>h4 {
+h3 {
     margin: 0;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .product-li {
     list-style: none;
     list-style-type: none;
     word-break: break-all;
+    height: 40px;
+}
+
+.span-name-attribute {
+    font-weight: bold;
+}
+
+.impar,
+.par {
+    padding: 4px;
+}
+
+.par {
+    background-color: rgb(245, 242, 242);
+}
+
+.impar {
+    background-color: rgba(128, 128, 128, 0.288);
+
 }

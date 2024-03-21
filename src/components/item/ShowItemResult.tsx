@@ -26,7 +26,8 @@ export default function Item() {
     }, [itemId]);
     console.log(product);
 
-    const { id, title, pictures, price, attributes }: any = product;
+    const { id, title, pictures, price, attributes, warranty, permalink }: any = product;
+    console.log(warranty);
 
     return (
         <div>
@@ -39,6 +40,8 @@ export default function Item() {
                     price={price}
                     attributes={attributes}
                     isItems={false}
+                    warranty={warranty}
+                    permalink={permalink}
                 />
             }
         </div>

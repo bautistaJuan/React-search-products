@@ -1,13 +1,17 @@
-
-import { Link } from "react-router-dom";
+import "./home.css";
 export default function Home() {
     return (
-        <div style={{ textAlign: "center" }}>
-            <h1>Home</h1>
-            <h3>Ejemplo para cambiar rutas</h3>
-            <Link to={"/search/producto1"}>
-                <button style={{ backgroundColor: "grey", width: "300px", padding: "10px" }} >Cambiar</button>
-            </Link>
-        </div>
+        <>
+            <div className="container-presentation">
+                <h1>Buscador de Mercadolibre por <span>Juan</span></h1>
+                <div className="cpu-image"></div>
+            </div>
+            <div className="container-tools">
+                <h2>Hecho con:</h2>
+                <img className="img-react" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="React" />
+                <span>Y</span>
+                <img className="img-typescript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+            </div>
+        </>
     )
 }

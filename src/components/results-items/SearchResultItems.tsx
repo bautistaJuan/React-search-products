@@ -20,12 +20,14 @@ type ProductType = {
     picture?: string,
     pictures?: Pictures[],
     attributes?: [],
+    warranty?: string,
+    permalink?: string,
     price: string,
     isItems: boolean
 }
 
 
-function ResultItems({ id, title, picture, pictures, price, attributes, isItems }: ProductType) {
+function ResultItems({ id, title, picture, pictures, price, attributes, isItems, warranty, permalink }: ProductType) {
 
     const formattedPrice = price ? parseFloat(price).toLocaleString('es-AR', {
         minimumFractionDigits: 2,
@@ -85,34 +87,45 @@ function ResultItems({ id, title, picture, pictures, price, attributes, isItems 
                         </Carousel>
                     </section>
                     <section>
-                        {title ? (
-                            <h2 className="product-title">{title}</h2>
-                        ) : (
-                            <h1 >Sin titulo</h1>
-                        )}
-                        {price ? (
-                            <span className="product-price">{"$ " + formattedPrice}</span>
-                        ) : (
-                            <span >Precio no disponible</span>
-                        )}
-                    </section>
-                    <section>
-                        <h3>Todo lo que tenes que saber sopre el producto</h3>
-                        <div className="attributes">
-                            {attributes ? (
-                                attributes.map((att: any, index) => {
-                                    return (
-                                        <ul key={index} className="product-ul">
-                                            <h4>{att.name}</h4> :
-                                            <li className="product-li">
-                                                {att.value_name}
-                                            </li>
-                                        </ul>)
-                                })
+                        <div className="container-text-desc">
+                            {title ? (
+                                <h2 className="product-title">{title}</h2>
                             ) : (
-                                <span >informacion no disponible</span>
+                                <h1 >Sin titulo</h1>
+                            )}
+                            {warranty ? (
+                                <span className="product-warranty">{warranty}</span>
+                            ) : (
+                                <span className="product-warranty">Sin garantía</span>
+                            )}
+                            {price ? (
+                                <span className="product-price">{"$ " + formattedPrice}</span>
+                            ) : (
+                                <span>Precio no disponible</span>
                             )}
                         </div>
+                        <a href={permalink}>
+                            <button className="button-comprar">Comprar</button>
+                        </a>
+                        <section>
+                            <h3>Todo lo que tenes que saber sopre el producto</h3>
+                            <div className="attributes">
+                                {attributes ? (
+                                    <ul className="product-ul">{
+                                        attributes.map((att: any, index) => {
+                                            const addClassname = index % 2 === 0 ? "par" : "impar";
+                                            return (
+                                                <li key={index} className={`product-li ${addClassname}`} >
+                                                    <span className="span-name-attribute">{att.name}</span>: <span className="span-value-attribute">{att.value_name}</span>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                ) : (
+                                    <span >informacion no disponible</span>
+                                )}
+                            </div>
+                        </section>
                     </section>
                 </main>
             )}
