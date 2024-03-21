@@ -5,7 +5,7 @@ export default function Layout() {
     return (
         <div>
             <SearchForm />
-            <article>
+            <article className="outlet-container" >
                 <Outlet />
             </article>
         </div>

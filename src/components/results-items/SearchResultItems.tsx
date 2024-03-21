@@ -104,9 +104,11 @@ function ResultItems({ id, title, picture, pictures, price, attributes, isItems,
                                 <span>Precio no disponible</span>
                             )}
                         </div>
-                        <a href={permalink}>
-                            <button className="button-comprar">Comprar</button>
-                        </a>
+                        <div className="div-button-container">
+                            <a style={{ width: "100%" }} href={permalink}>
+                                <button className="button-comprar">Comprar</button>
+                            </a>
+                        </div>
                         <section>
                             <h3>Todo lo que tenes que saber sopre el producto</h3>
                             <div className="attributes">
@@ -127,8 +129,9 @@ function ResultItems({ id, title, picture, pictures, price, attributes, isItems,
                             </div>
                         </section>
                     </section>
-                </main>
-            )}
+                </main >
+            )
+            }
         </>
     )
 }

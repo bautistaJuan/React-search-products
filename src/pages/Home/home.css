@@ -1,7 +1,15 @@
+.home-container {
+    background-color: rgb(23, 40, 73);
+    height: 100vh;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .container-presentation {
     text-align: center;
-    margin-top: 40px;
 }
+
 
 
 
@@ -55,16 +63,29 @@
 .container-tools {
     display: flex;
     justify-content: center;
+    margin-top: 60px;
+    min-width: 200px;
+    padding: 10px;
 }
 
 .img-react,
 .img-typescript {
-    max-height: 145px;
+    height: 120px;
     text-align: center;
 
 }
 
-.container-tools>h1,
-h2 {
+.title {
     margin: 0;
+    padding: 0;
+    padding: 20px;
+}
+
+.title>span {
+    font-size: 12px;
+    font-style: normal;
+}
+
+.h2 {
+    padding: 0;
 }

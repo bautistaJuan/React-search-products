@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 .result-container {
     margin: 8px;
     background-color: #fff;
     min-height: 200px;
     cursor: pointer;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-    border-bottom: 0.1px solid rgba(136, 136, 136, 0.265);
+    border-radius: 5px;
 }
 
 .result-container:hover {
