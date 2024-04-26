@@ -7,12 +7,6 @@
     border-radius: 5px;
 }
 
-.result-container:hover {
-    box-shadow: 0px 0px 30px grey;
-    transition: all .5s;
-}
-
-
 .data-container {
     height: 12rem;
     display: flex;
@@ -44,4 +38,9 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 1.25;
+}
+
+.product-container {
+    width: 80%;
+    margin: 0 auto;
 }

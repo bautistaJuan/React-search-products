@@ -33,6 +33,10 @@
     object-fit: contain;
 }
 
+.product-title {
+    font-size: 19px;
+}
+
 .container-text-desc {
     display: flex;
     flex-direction: column;
@@ -54,7 +58,12 @@
     justify-content: center;
 }
 
+.button-comprar-a {
+    width: 100%;
+}
+
 .button-comprar {
+    cursor: pointer;
     background-color: #3483fa;
     border-color: transparent;
     color: #fff;

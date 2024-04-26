@@ -58,7 +58,7 @@ function ResultItems({ id, title, picture, pictures, price, attributes, isItems,
                     </section>
                 </main>
             ) : ( //Muestra solamente el producto seleccionado
-                <main className="product-container">
+                <main className={stylesItems["product-container"]}>
                     <section className="slider-container">
                         <Carousel
                             dragging={true}
@@ -105,29 +105,10 @@ function ResultItems({ id, title, picture, pictures, price, attributes, isItems,
                             )}
                         </div>
                         <div className="div-button-container">
-                            <a style={{ width: "100%" }} href={permalink}>
+                            <a className="button-comprar-a" href={permalink}>
                                 <button className="button-comprar">Comprar</button>
                             </a>
                         </div>
-                        <section>
-                            <h3>Todo lo que tenes que saber sopre el producto</h3>
-                            <div className="attributes">
-                                {attributes ? (
-                                    <ul className="product-ul">{
-                                        attributes.map((att: any, index) => {
-                                            const addClassname = index % 2 === 0 ? "par" : "impar";
-                                            return (
-                                                <li key={index} className={`product-li ${addClassname}`} >
-                                                    <span className="span-name-attribute">{att.name}</span>: <span className="span-value-attribute">{att.value_name}</span>
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                ) : (
-                                    <span >informacion no disponible</span>
-                                )}
-                            </div>
-                        </section>
                     </section>
                 </main >
             )
