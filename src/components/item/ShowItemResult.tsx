@@ -26,9 +26,7 @@ export default function Item() {
     }, [itemId]);
     console.log(product);
 
-    const { id, title, pictures, price, attributes, warranty, permalink }: any = product;
-    console.log(warranty);
-
+    const { id, title, pictures, price, warranty, permalink }: any = product;
     return (
         <div>
             {loading ? <Loader /> :
@@ -38,7 +36,6 @@ export default function Item() {
                     pictures={pictures
                     }
                     price={price}
-                    attributes={attributes}
                     isItems={false}
                     warranty={warranty}
                     permalink={permalink}
