@@ -19,7 +19,6 @@ type ProductType = {
     title: string,
     picture?: string,
     pictures?: Pictures[],
-    attributes?: [],
     warranty?: string,
     permalink?: string,
     price: string,
@@ -27,7 +26,7 @@ type ProductType = {
 }
 
 
-function ResultItems({ id, title, picture, pictures, price, attributes, isItems, warranty, permalink }: ProductType) {
+function ResultItems({ id, title, picture, pictures, price, isItems, warranty, permalink }: ProductType) {
 
     const formattedPrice = price ? parseFloat(price).toLocaleString('es-AR', {
         minimumFractionDigits: 2,
