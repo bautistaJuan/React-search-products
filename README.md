@@ -6,13 +6,14 @@ Buscador de mercadolibre utilizando **React**, el mismo consume los datos de las
 
 ## Conocimientos aplicados:
 
+- React 
 - React Hooks
 - Custom Hooks
 - TypeScript
+- Funcional Components
 - CSS Modules
-- Vite
 - SVG Loader
 - UI Components
-- Funcional Components
-- API Fetch
+- APIs
 - Responsive Design
+- Vite
